@@ -1,5 +1,5 @@
 {
-  "name": "playwrite_npm",
+  "name": "playwright_npm",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,7 +7,6 @@
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:chrome": "playwright test --project=chromium",
-    "test:e2e": "playwright test tests/e2e.spec.js",
     "test:homepage": "playwright test tests/homepage.spec.js",
     "test:search": "playwright test tests/search.spec.js",
     "test:accessibility": "playwright test tests/accessibility.spec.js",
@@ -15,7 +14,21 @@
     "test:language": "playwright test tests/language.spec.js",
     "test:privacy": "playwright test tests/privacy.spec.js",
     "test:performance": "playwright test tests/performance.spec.js",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "update:dependencies": "npx npm-check-updates -u && npm install",
+    "setup": "./scripts/setup-project.sh",
+    "test:all": "./scripts/run-all-tests.sh",
+    "test:dev": "./scripts/dev-test.sh",
+    "test:ci": "./scripts/ci-test.sh",
+    "test:compliance": "./scripts/compliance-tests.sh",
+    "test:responsive-full": "./scripts/responsive-tests.sh",
+    "test:browsers": "./scripts/browser-tests.sh",
+    "test:visual": "./scripts/visual-tests.sh",
+    "test:data": "./scripts/data-tests.sh",
+    "test:perf": "./scripts/performance-test.sh",
+    "cleanup": "./scripts/cleanup.sh",
+    "health": "./scripts/health-check.sh",
+    "update:browsers": "./scripts/update-browsers.sh"
   },
   "keywords": [],
   "author": "",
